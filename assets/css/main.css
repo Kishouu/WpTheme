@@ -1,0 +1,273 @@
+/* Custom theme styles */
+
+header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  gap: 1rem;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.btn-outline-dark {
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.sidebar {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.widget {
+  margin-bottom: 2rem;
+}
+
+.widget-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #254c86;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* WooCommerce Product Grid */
+.woocommerce ul.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.woocommerce ul.products li.product {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+}
+
+@media (max-width: 768px) {
+  .woocommerce ul.products li.product {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Product Cards */
+.woocommerce ul.products li.product .card {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.woocommerce ul.products li.product .card:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Titles */
+.woocommerce ul.products li.product .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Price */
+.woocommerce ul.products li.product .price {
+  color: var(--text-color);
+}
+
+/* Add to Cart Button */
+.woocommerce ul.products li.product .button {
+  margin-top: auto;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.woocommerce ul.products li.product .button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Sale Badge */
+.woocommerce span.onsale {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+/* Buttons */
+.woocommerce button,
+.woocommerce a.button,
+.woocommerce input.button {
+  @apply btn btn-outline-dark;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.woocommerce a.button:hover,
+.woocommerce input.button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+.woocommerce .card {
+  background-color: var(--bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  transition: transform 0.2s;
+}
+
+.woocommerce .card:hover {
+  transform: translateY(-5px);
+}
+
+.woocommerce .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.woocommerce .price {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.woocommerce .woocommerce-cart-form,
+.woocommerce .woocommerce-checkout {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.woocommerce .shop_table {
+  margin-bottom: 2rem;
+}
+
+.woocommerce .woocommerce-cart-form__contents {
+  width: 100%;
+}
+
+/* Blog Post Titles */
+.entry-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.entry-title a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.entry-title a:hover {
+  text-decoration: underline;
+  color: #0d6efd; /* Bootstrap primary color */
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0d6efd; /* Light theme accent */
+  --link-hover: #0056b3;
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #66b2ff; /* Dark theme accent */
+  --link-hover: #3399ff;
+}
+/* Better header alignment */
+.site-header .navbar-nav {
+  align-items: center;
+}
+
+/* Optional: Make sure header items don't wrap oddly */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .search-toggle,
+  .form-check {
+    margin-top: 1rem;
+  }
+}
+/* Menu Styling */
+.main-menu li {
+  position: relative;
+}
+
+.main-menu a {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.main-menu a:hover,
+.main-menu .current-menu-item > a {
+  color: var(--accent-color);
+}
+
+.main-menu .current-menu-item > a::after,
+.main-menu a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+/* Search Bar */
+.site-search input[type="search"] {
+  max-width: 200px;
+}
